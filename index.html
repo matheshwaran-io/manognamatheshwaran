@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Manogna</title>
+<meta name="description" content="A birthday letter for Manogna." />
+
+<!-- 
+  HOW TO ADD YOUR OWN PHOTOS & VIDEOS
+  ------------------------------------
+  1. Drop your photos into  assets/photos/  and name them:
+       photo-1.jpg  photo-2.jpg  photo-3.jpg  photo-4.jpg  photo-5.jpg  photo-6.jpg
+     (jpg, jpeg, png or webp all work — just update the file extension
+     in the <img> tags below if you don't use .jpg)
+
+  2. Drop your videos into  assets/videos/  and name them:
+       video-1.mp4   video-2.mp4
+
+  3. That's it — the page already has graceful placeholder frames wherever
+     a file is missing, so you can add them one at a time and refresh.
+
+  4. To deploy on Vercel: push this folder to a GitHub repo and import it
+     in Vercel (Framework Preset: "Other" / static site) — no build step
+     needed. Or run `vercel` from inside this folder with the Vercel CLI.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Ambient floating petals, purely decorative -->
+<div class="petals" aria-hidden="true" id="petals"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">July 27th</p>
+    <h2 class="hero-script">Manogna</h2>
+    <h1 class="hero-heading">Happy Birthday,<br class="hero-break"> My Love</h1>
+    <p class="hero-sub">Today the whole world gets to celebrate you.<br>I just get to do it a little louder than everyone else.</p>
+    <a href="#story" class="scroll-cue" aria-label="Scroll to our story">
+      <span>our story</span>
+      <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1V21M7 21L1 15M7 21L13 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery-section" id="story">
+  <div class="section-head reveal">
+    <p class="eyebrow eyebrow-dark">Chapter One</p>
+    <h2 class="section-heading">Every Frame Has You In It</h2>
+    <p class="section-sub">A few of my favourite moments with you — more to come.</p>
+  </div>
+
+  <div class="polaroid-grid">
+    <!-- Repeat this block for each photo. data-caption is the little handwritten note under the photo. -->
+    <figure class="polaroid reveal" style="--r:-4deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-1.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>The day everything changed</figcaption>
+    </figure>
+
+    <figure class="polaroid reveal" style="--r:3deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-2.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>Us, being us</figcaption>
+    </figure>
+
+    <figure class="polaroid reveal" style="--r:-2deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-3.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>That laugh I love</figcaption>
+    </figure>
+
+    <figure class="polaroid reveal" style="--r:5deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-4.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>My favourite view</figcaption>
+    </figure>
+
+    <figure class="polaroid reveal" style="--r:-5deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-5.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>Just us two</figcaption>
+    </figure>
+
+    <figure class="polaroid reveal" style="--r:2deg">
+      <div class="polaroid-frame">
+        <img src="assets/photos/photo-6.jpg" alt="A photo of us" loading="lazy"
+             onerror="this.closest('.polaroid').classList.add('is-empty')">
+      </div>
+      <figcaption>Forever starts here</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section video-section" id="motion">
+  <div class="section-head reveal">
+    <p class="eyebrow eyebrow-dark">Chapter Two</p>
+    <h2 class="section-heading">Some Moments Move Too Fast For Photos</h2>
+    <p class="section-sub">Press play.</p>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-card reveal">
+      <video controls preload="metadata" playsinline
+             onerror="this.closest('.video-card').classList.add('is-empty')">
+        <source src="assets/videos/video-1.mp4" type="video/mp4">
+      </video>
+      <div class="video-placeholder">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg>
+        <span>Add video-1.mp4</span>
+      </div>
+    </div>
+
+    <div class="video-card reveal">
+      <video controls preload="metadata" playsinline
+             onerror="this.closest('.video-card').classList.add('is-empty')">
+        <source src="assets/videos/video-2.mp4" type="video/mp4">
+      </video>
+      <div class="video-placeholder">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg>
+        <span>Add video-2.mp4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOVE LETTER ============ -->
+<section class="section letter-section" id="letter">
+  <div class="section-head reveal">
+    <p class="eyebrow eyebrow-dark">For You</p>
+    <h2 class="section-heading">A Letter, Sealed With Everything I Feel</h2>
+  </div>
+
+  <div class="envelope-wrap reveal">
+    <button class="envelope" id="envelope" aria-expanded="false" aria-controls="letter-paper">
+      <span class="envelope-back"></span>
+      <span class="envelope-flap"></span>
+      <span class="envelope-seal">M</span>
+      <span class="envelope-front"></span>
+      <span class="envelope-hint">tap to open</span>
+    </button>
+
+    <article class="letter-paper" id="letter-paper">
+      <p class="letter-body">Happy Birthday, my sweet heart. ❤️🎂<br><br>
+I don't know how you suddenly came into my life, but somehow you became my whole world. Sometimes I keep thinking&hellip; why didn't you come into my life earlier? Maybe if you had, I would have smiled a lot more and cried a lot less.<br><br>
+Before you, I never really felt like I was enough. I always felt like I had to prove myself to everyone. But you&hellip; you made me feel loved without asking me to be anyone else. You made me believe that I deserve happiness too.<br><br>
+When I'm with you, my heart feels peaceful. No matter how hard life gets, talking to you makes everything feel a little lighter. You became my safe place, my comfort, my home.<br><br>
+I don't want expensive things, a perfect life, or anything else. I just want a future where I get to wake up beside you, grow old with you, laugh with you, fight with you, and still choose you every single day. That's the only dream I truly care about.<br><br>
+If life ever becomes difficult, please don't let go of my hand. I promise I'll never let go of yours. We'll face every problem together, and one day we'll look back at all of this and smile because we made it.<br><br>
+Thank you for loving me when I couldn't even love myself. Thank you for making me feel like my life has meaning. You are the best thing that has ever happened to me, and I'll spend the rest of my life being grateful that you came into it.<br><br>
+I love you more than words will ever be able to explain. ❤️<br><br>
+Happy Birthday once again, my dear Mano. I hope this is just the first of countless birthdays we'll celebrate together.<br><br>
+Forever yours.</p>
+      <p class="letter-sign">Forever yours ❤️</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-hearts" aria-hidden="true">
+    <svg width="20" height="18" viewBox="0 0 24 22"><path d="M12 21S2 14.5 2 7.8C2 4.1 4.7 2 7.6 2 9.6 2 11.2 3 12 4.6 12.8 3 14.4 2 16.4 2 19.3 2 22 4.1 22 7.8 22 14.5 12 21 12 21Z" fill="currentColor"/></svg>
+  </div>
+  <p class="footer-line">Here's to every birthday still to come.</p>
+  <p class="footer-name">I love you, Mano.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
