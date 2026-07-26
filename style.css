@@ -235,13 +235,16 @@ button { font: inherit; }
 .gallery-section { background: var(--blush-soft); }
 
 .polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.6rem 1.8rem;
   padding-top: 0.5rem;
 }
 
 .polaroid {
+  flex: 1 1 280px;
+  max-width: 320px;
   margin: 0;
   transform: rotate(var(--r, 0deg));
   transition: transform 0.35s ease;
