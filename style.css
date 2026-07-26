@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
 /* =========================================================
    DESIGN TOKENS & CORE DESIGN SYSTEM
    ========================================================= */
@@ -15,12 +17,12 @@
   --cream:       #FFFAF7;
   --ink:         #230F14;
   --ink-soft:    rgba(35, 15, 20, 0.68);
-  --glass-bg:    rgba(255, 255, 255, 0.72);
-  --glass-border:rgba(255, 255, 255, 0.45);
+  --glass-bg:    rgba(39, 7, 13, 0.65);
+  --glass-border:rgba(212, 175, 55, 0.25);
 
-  --font-display: 'Cormorant Garamond', serif;
-  --font-script:  'Parisienne', cursive;
-  --font-body:    'Jost', sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-script:  'Parisienne', 'Brush Script MT', cursive;
+  --font-body:    'Jost', system-ui, -apple-system, sans-serif;
 
   --container: 1120px;
   --radius-lg: 16px;
@@ -85,18 +87,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 900;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 250, 247, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  padding: 1.1rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
   transition: all 0.35s ease;
 }
 
 .glass-header.scrolled {
-  padding: 0.75rem 1.5rem;
-  box-shadow: 0 10px 30px -10px rgba(90, 22, 33, 0.12);
-  background: rgba(255, 250, 247, 0.92);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  background: rgba(39, 7, 13, 0.92);
 }
 
 .header-inner {
@@ -109,17 +111,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .header-brand {
   font-family: var(--font-script);
-  font-size: 1.7rem;
-  color: var(--wine);
+  font-size: 1.8rem;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .brand-sparkle {
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   animation: pulseSparkle 2s ease-in-out infinite;
 }
 
@@ -131,14 +134,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.2rem;
 }
 
 .header-nav a {
   font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 500;
   position: relative;
   padding: 0.25rem 0;
@@ -155,28 +158,28 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   border-radius: 2px;
 }
 
-.header-nav a:hover { color: var(--wine); }
+.header-nav a:hover { color: var(--gold-light); }
 .header-nav a:hover::after { width: 100%; }
 
 .music-toggle-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.4rem 0.9rem;
+  padding: 0.45rem 1rem;
   border-radius: 20px;
-  background: rgba(90, 22, 33, 0.06);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold);
   font-size: 0.78rem;
-  color: var(--wine);
+  color: var(--gold-light);
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .music-toggle-btn:hover {
-  background: var(--wine);
-  color: #fff;
-  border-color: var(--wine);
+  background: var(--gold);
+  color: var(--wine-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 15px var(--gold-glow);
 }
 
 /* =========================================================
@@ -343,38 +346,47 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hero-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.85rem 1.8rem;
   border-radius: 35px;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
   transition: all 0.35s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, var(--gold), #B59043);
-  color: var(--wine-dark);
+  background: linear-gradient(135deg, var(--gold) 0%, #B59043 100%);
+  color: #27070D !important;
 }
 
 .primary-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 30px var(--gold-glow);
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: #27070D !important;
 }
 
 .love-btn {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff !important;
+  border: 1px solid rgba(212, 175, 55, 0.4);
 }
 
 .love-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--gold);
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
 }
 
 .scroll-cue {
