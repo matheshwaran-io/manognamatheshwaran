@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #27070D;
+    --bg-card: rgba(59, 13, 21, 0.7);
+    --text-primary: #FFFAF7;
+    --text-secondary: #F9DCDD;
+    --accent-gold: #D4AF37;
+    --accent-rose: #E28A95;
+    --border-glass: rgba(212, 175, 55, 0.2);
+  }
+
+  .theme-rose-gold {
+    --bg-primary: #2B0B14;
+    --bg-card: rgba(70, 20, 35, 0.7);
+    --text-primary: #FFF0F3;
+    --text-secondary: #FFCCD5;
+    --accent-gold: #F4E4BC;
+    --accent-rose: #FF758F;
+    --border-glass: rgba(255, 117, 143, 0.3);
+  }
+
+  .theme-obsidian {
+    --bg-primary: #0D060A;
+    --bg-card: rgba(24, 12, 18, 0.85);
+    --text-primary: #F8F9FA;
+    --text-secondary: #E9ECEF;
+    --accent-gold: #E6C687;
+    --accent-rose: #D94E67;
+    --border-glass: rgba(230, 198, 135, 0.25);
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.glass-nav {
+  background: rgba(24, 7, 13, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a0409;
+}
+::-webkit-scrollbar-thumb {
+  background: #5A1621;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glowing text utility */
+.text-glow-gold {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 15px rgba(226, 138, 149, 0.5), 0 0 30px rgba(226, 138, 149, 0.2);
+}
+
+/* Paper Watermark Pattern */
+.paper-pattern {
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #fdfbf7 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
